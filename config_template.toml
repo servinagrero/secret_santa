@@ -1,0 +1,26 @@
+[config]
+mail = "sender@mail.com"
+password = "mail password"
+# If using Gmail, then the 16 character token
+# See https://support.google.com/mail/answer/185833?hl=en for more information
+# password = "aaaa aaaa aaaa aaaa"
+subject = "Mail Subject"
+body = """
+This is the body of the mail that will be sent to every participant.
+
+The following template variables are accesible:
+
+${first_name} Name of the person making the gift
+${first_mail} Mail of the person making the gift
+${second_name} Name of the person receiving the gift
+${second_mail} Mail of the person receiving the gift
+${subject_mail} Mail subject
+"""
+
+[[participants]]
+name="First participant"
+mail="first@mail.com"
+
+[[participants]]
+name="Second participant"
+mail="second @mail.com"
